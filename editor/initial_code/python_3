@@ -4,22 +4,18 @@ def checkio(word_box,name):
 
 if __name__ == '__main__':
   # These "asserts" are used only for self-checking and not necessarily for auto-testing
-  assert checkio("Laucnelot","Arthur Lancelot Robin Bedevere Galahad") == "Lancelot", "1st example"
-  assert checkio("Lance-a-lot","Arthur Lancelot Robin Bedevere Galahad") == "Lancelot", "2nd example"
-  assert checkio("Lionel","Arthur Lancelot Robin Bedevere Galahad") == "", "3rd example"
-  assert checkio("Jon",
-                 ("Graham John Eric Terry Michael Connie "
+  assert checkio("Arthur Lancelot Robin Bedevere Galahad","Laucnelot") == "Lancelot", "1st example"
+  assert checkio("Arthur Lancelot Robin Bedevere Galahad","Lance-a-lot") == "Lancelot", "2nd example"
+  assert checkio("Arthur Lancelot Robin Bedevere Galahad","Lionel") == "", "3rd example"
+  assert checkio(("Graham John Eric Terry Michael Connie "
                   "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko")) == "John", "4th example"
-  assert checkio("Noj",
-                 ("Graham John Eric Terry Michael Connie "
+                  "Romilly Alison Loraine Anna Mitsuko"),"Jon") == "John", "4th example"
+  assert checkio(("Graham John Eric Terry Michael Connie "
                   "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko")) == "", "5th example"
-  assert checkio("Sandee",
-                 ("Graham John Eric Terry Michael Connie "
+                  "Romilly Alison Loraine Anna Mitsuko"),"Noj") == "", "5th example"
+  assert checkio(("Graham John Eric Terry Michael Connie "
                   "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko")) == "Sandy", "6th example"   
-  assert checkio("Neal",
-                 ("Graham John Eric Terry Michael Connie "
+                  "Romilly Alison Loraine Anna Mitsuko"),"Sandee") == "Sandy", "6th example"   
+  assert checkio(("Graham John Eric Terry Michael Connie "
                   "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko")) == "Neil", "7th example"
+                  "Romilly Alison Loraine Anna Mitsuko"),"Neal") == "Neil", "7th example"
