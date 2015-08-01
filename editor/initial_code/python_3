@@ -1,9 +1,25 @@
-def find_message(text):
-    """Find a secret message"""
-    return ""
+def checkio(word_box,name):
+  """Find the closest name in word_box.  If none are close return ''"""
+  return ''
 
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert find_message("How are you? Eh, ok. Low or Lower? Ohhh.") == "HELLO", "hello"
-    assert find_message("hello world!") == "", "Nothing"
-    assert find_message("HELLO WORLD!!!") == "HELLOWORLD", "Capitals"
+  # These "asserts" are used only for self-checking and not necessarily for auto-testing
+  assert checkio("Laucnelot","Arthur Lancelot Robin Bedevere Galahad") == "Lancelot", "1st example"
+  assert checkio("Lance-a-lot","Arthur Lancelot Robin Bedevere Galahad") == "Lancelot", "2nd example"
+  assert checkio("Lionel","Arthur Lancelot Robin Bedevere Galahad") == "", "3rd example"
+  assert checkio("Jon",
+                 ("Graham John Eric Terry Michael Connie "
+                  "Carol Neil Bee Sally Mark Elspeth Sandy "
+                  "Romilly Alison Loraine Anna Mitsuko")) == "John", "4th example"
+  assert checkio("Noj",
+                 ("Graham John Eric Terry Michael Connie "
+                  "Carol Neil Bee Sally Mark Elspeth Sandy "
+                  "Romilly Alison Loraine Anna Mitsuko")) == "", "5th example"
+  assert checkio("Sandee",
+                 ("Graham John Eric Terry Michael Connie "
+                  "Carol Neil Bee Sally Mark Elspeth Sandy "
+                  "Romilly Alison Loraine Anna Mitsuko")) == "Sandy", "6th example"   
+  assert checkio("Neal",
+                 ("Graham John Eric Terry Michael Connie "
+                  "Carol Neil Bee Sally Mark Elspeth Sandy "
+                  "Romilly Alison Loraine Anna Mitsuko")) == "Neil", "7th example"
