@@ -1,21 +1,23 @@
-def checkio(word_box,name):
-  """Find the closest name in word_box.  If none are close return ''"""
-  return ''
+def checkio(text):
 
-if __name__ == '__main__':
-  # These "asserts" are used only for self-checking and not necessarily for auto-testing
-  assert checkio("Arthur Lancelot Robin Bedevere Galahad","Laucnelot") == "Lancelot", "1st example"
-  assert checkio("Arthur Lancelot Robin Bedevere Galahad","Lance-a-lot") == "Lancelot", "2nd example"
-  assert checkio("Arthur Lancelot Robin Bedevere Galahad","Lionel") == "", "3rd example"
-  assert checkio(("Graham John Eric Terry Michael Connie "
-                  "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko"),"Jon") == "John", "4th example"
-  assert checkio(("Graham John Eric Terry Michael Connie "
-                  "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko"),"Noj") == "", "5th example"
-  assert checkio(("Graham John Eric Terry Michael Connie "
-                  "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko"),"Sandee") == "Sandy", "6th example"   
-  assert checkio(("Graham John Eric Terry Michael Connie "
-                  "Carol Neil Bee Sally Mark Elspeth Sandy "
-                  "Romilly Alison Loraine Anna Mitsuko"),"Neal") == "Neil", "7th example"
+    "Replace domain names with *****"
+    return ""
+
+if __name__ == '__main__':    
+
+    #These "asserts" using only for self-checking and not necessary for auto-testing
+    assert checkio(("Some of the most popular websites for 2015 include the search engines "
+                  "www.google.com, www.baidue.com, and www.google.co.in.  Top retail sites  "
+                  "include www.amazon.com, www.tmall.com, and www.taobao.com.")) == 
+                 ("Some of the most popular websites for 2015 include the search engines "
+                  "www.*****.com, www.*****.com, and www.*****.co.in.  Top retail sites "
+                  "include www.*****.com, www.*****.com, and www.*****.com."), "1st Example"
+
+    assert checkio(("Guido van Rossum received a master's degrees from the University of "
+                    "Amsterdam, http://www.uva.nl/en/masters-programmes.html, submitted his "
+                    "programming goals to DARPRA, http://www.darpa.mil/news, and probably "
+                    "has an IP router address of 192.168.1.1.")) ==
+                   ("Guido van Rossum received a master's degrees from the University of "
+                    "Amsterdam, http://www.*****.nl/en/masters-programmes.html, submitted his "
+                    "programming goals to DARPRA, " "http://www.*****.mil/news, and probably "
+                    "has an IP router address of 192.168.1.1.","2nd Example"), "2nd Example"
