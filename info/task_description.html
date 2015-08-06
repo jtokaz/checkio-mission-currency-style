@@ -1,22 +1,27 @@
 <p class="story">
-    "Surely you can't be serious?"
-    "I am serious...And don't call me Shirley."<br>
-    -- Airplane
+    "Well, it's that time of the month again. Payroll checks for our employees, "
+    "which require your signatures. And no forgetting to sign the big ones!"<br>
+    -- Trading Places
 </p>
  
 <p>
-    Ever had a friend or relative who misspells your name, forgotten how to spell <em>playwright</em>, or confused Timothy 
-    <em>Olyphant</em> with Timothy <em>Elephant</em>? Let's write a program that helps us correct these misspelled words.
-    You'll be given a word bank of names and a misspelled name.  Use your coding skills to find the correctly spelled name.
+    Many countries use different conventions for the thousands separator and decimal mark.  For example in the Netherlands
+    one million one thousand two hundred and eighty one-hundredths is written as 1.001.200,80, but in the US this is written
+    as 1,001,200.80.  Use your coding skills to convert dollars in the first style (Netherlands, Germany, Russia, Turkey,
+    Brazil, and others) to the second style (US, UK, Canada, China, Japan, Mexico, and others).
 </p>
 
 <p>
-    <strong>Input: </strong> A word box of possible names separated by spaces (unicode).
-                             The misspelled name as a string (unicode, without spaces).
+    Only currency amounts in dollars should be converted: $1.234,50 to $1,234.50, $1,000 to $1.000, but don't convert
+    your router IP address 192.168.1.1.  Also leave currency in the US style unchanged.
 </p>
 
 <p>
-    <strong>Output: </strong> The closest name if any is close, otherwise the empty string "".
+    <strong>Input: </strong> A string containing dollar amounts to be converted.
+</p>
+
+<p>
+    <strong>Output: </strong> A string with converted currencies.
 </p>
 
 
@@ -26,22 +31,17 @@
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio("Arthur Lancelot Robin Bedevere Galahad","Lance-a-lot") == "Lancelot"
-checkio("Arthur Lancelot Robin Bedevere Galahad","Lionel") == ""
+        checkio("Lot 192.001 costs $1.000,94.") == "Lot 192.001 costs $1,000.94."
+        checkio("$1,23 + $2,34 = $3,57.") == "$1.23 + $2.34 = $3.57."
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    This is a simple exercise in working with strings and using the Python standard library to
-    solve common problems without considering the details.  This could be used in trivia programs
-    to determine the intended user response while allowing for misspellings.
+    This is a simple exercise in working with strings and using the Python standard library.
 </p>
 
 <p>
     <strong>Precondition:</strong>
-    0 &lt; len(name) &le; 1000<br>
-    0 &lt; len(word_box) &le; 1000<br>
-    all(ch in string.ascii_letters+'-' for ch in name)<br>
-    all(ch in string.ascii_letters+'- ' for ch in word_box)
+    0 &lt; len(text) &le; 1000<br>
 </p>
