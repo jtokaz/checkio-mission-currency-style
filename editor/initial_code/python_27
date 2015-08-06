@@ -1,23 +1,16 @@
 def checkio(text):
-
-    "Replace domain names with *****"
+    
+    "Convert Euro style currency in dollars to US/UK style"
     return ""
 
 if __name__ == '__main__':    
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert checkio(("Some of the most popular websites for 2015 include the search engines "
-                  "www.google.com, www.baidue.com, and www.google.co.in.  Top retail sites  "
-                  "include www.amazon.com, www.tmall.com, and www.taobao.com.")) == 
-                 ("Some of the most popular websites for 2015 include the search engines "
-                  "www.*****.com, www.*****.com, and www.*****.co.in.  Top retail sites "
-                  "include www.*****.com, www.*****.com, and www.*****.com."), "1st Example"
-
-    assert checkio(("Guido van Rossum received a master's degrees from the University of "
-                    "Amsterdam, http://www.uva.nl/en/masters-programmes.html, submitted his "
-                    "programming goals to DARPRA, http://www.darpa.mil/news, and probably "
-                    "has an IP router address of 192.168.1.1.")) ==
-                   ("Guido van Rossum received a master's degrees from the University of "
-                    "Amsterdam, http://www.*****.nl/en/masters-programmes.html, submitted his "
-                    "programming goals to DARPRA, " "http://www.*****.mil/news, and probably "
-                    "has an IP router address of 192.168.1.1.","2nd Example"), "2nd Example"
+    assert checkio("$1.234.567,89") == "$1,234,567.89" , "1st Example"
+    assert checkio("$0,89") == "$0.89" , "2nd Example"
+    assert checkio("Euro Style = $12.345,67, US Style = $12,345.67") == \
+                   "Euro Style = $12,345.67, US Style = $12,345.67" , "European and US"
+    assert checkio("Us Style = $12,345.67, Euro Style = $12.345,67") == \
+                   "Us Style = $12,345.67, Euro Style = $12,345.67" , "US and European"
+    assert checkio("$1.234, $5.678 and $9") == \
+                   "$1,234, $5,678 and $9", "Dollars without cents"
