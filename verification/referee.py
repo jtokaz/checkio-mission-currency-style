@@ -37,8 +37,11 @@ from tests import TESTS
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
-        tests=TESTS#,
-        #function_name="find_message"
+        tests=TESTS,
+        cover_code={
+            'python-27': cover_codes.unwrap_args,  # or None
+            'python-3': cover_codes.unwrap_args
+        },
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
         # add_close_builtins=[],
