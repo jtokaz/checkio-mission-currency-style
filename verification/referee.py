@@ -37,8 +37,8 @@ from tests import TESTS
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
-        tests=TESTS,
-        function_name="find_message"
+        tests=TESTS#,
+        #function_name="find_message"
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
         # add_close_builtins=[],
