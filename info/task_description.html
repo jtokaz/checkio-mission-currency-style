@@ -44,4 +44,7 @@
 <p>
     <strong>Precondition:</strong>
     0 &lt; len(text) &le; 1000<br>
+    len(fraction_part_of_currency) in {0,2}<br>
+    all(s[-1].isdigit() for s in currency_substrs)<br>
+    all(s[0] == '$' for s in currency_substr)<br>
 </p>
