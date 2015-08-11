@@ -65,10 +65,10 @@ TESTS = {
         },
         {
             "input": ("Clayton Kershaw $31.000.000\n"
-                    "Zack Greinker   $27.000.000\n"
+                    "Zack Greinke   $27.000.000\n"
                     "Adrian Gonzalez $21.857.143\n"),
             "answer": ("Clayton Kershaw $31,000,000\n"
-                    "Zack Greinker   $27,000,000\n"
+                    "Zack Greinke   $27,000,000\n"
                     "Adrian Gonzalez $21,857,143\n")
         }        
     ]
