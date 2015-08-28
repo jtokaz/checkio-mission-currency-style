@@ -40,14 +40,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'find_message';
+            var fname = 'fix_currency';
 
             var checkioInput = data.in;
             if (checkioInput) {
-                var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
+                var checkioInputStr = fname + '(u' + JSON.stringify(checkioInput) + ')';
             }
             else {
-                checkioInputStr = fname + '("How are You?")';
+                checkioInputStr = fname + '(u"$1.234.567,89")';
             }
 
             var failError = function (dError) {

@@ -17,7 +17,7 @@
 </p>
 
 <p>
-    <strong>Input: </strong> A string containing dollar amounts to be converted.
+    <strong>Input: </strong> A string containing dollar amounts to be converted (unicode for py2).
 </p>
 
 <p>
@@ -31,8 +31,8 @@
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-        checkio("Lot 192.001 costs $1.000,94.") == "Lot 192.001 costs $1,000.94."
-        checkio("$1,23 + $2,34 = $3,57.") == "$1.23 + $2.34 = $3.57."</pre>
+fix_currency("Lot 192.001 costs $1.000,94.") == "Lot 192.001 costs $1,000.94."
+fix_currency("$1,23 + $2,34 = $3,57.") == "$1.23 + $2.34 = $3.57."</pre>
 </div>
 
 <p class="for_info_only">
